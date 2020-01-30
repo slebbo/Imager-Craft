@@ -78,7 +78,7 @@ class ImgixTransformedImageModel implements TransformedImageInterface
         $this->size = 0;
 
         if ($imageUrl !== null) {
-            $this->url = $imageUrl;
+            $this->url = utf8_decode(urldecode($imageUrl));
         }
 
         $this->width = 0;
